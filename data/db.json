@@ -1,0 +1,77 @@
+{
+    "users": [
+      {
+        "name": "Furkan",
+        "surname": "Karaoglu",
+        "school": "ISB",
+        "position": "Principal",
+        "profilePic": "https://images.pexels.com/photos/20222375/pexels-photo-20222375/free-photo-of-scruffy-dog-in-meadow.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "id": 1
+      },
+      {
+        "name": "Tolga",
+        "surname": "Yapici",
+        "school": "ICHB",
+        "position": "Secretary",
+        "profilePic": "https://images.pexels.com/photos/12672768/pexels-photo-12672768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "id": 2
+      }
+    ],
+
+    "menus": [
+      {
+        "label": "Home",
+        "url": "/",
+        "icon":"faHouse"
+      },
+      {
+        "label": "About Us",
+        "icon": "faCircle",
+        "submenu": [
+          {
+            "label": "About",
+            "url": "/",
+            "submenu": [
+              {
+                "label": "About us",
+                "url": "/about"
+              },
+              {
+                "label": "History",
+                "url": "/"
+              },    
+              {
+                "label": "Future",
+                "url": "/"
+              }
+            ]
+          },
+          {
+            "label": "Mission",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "label": "Admission",
+        "url": "/admission",
+        "icon":"faHouse"
+      },
+      {
+        "label": "Student",
+        "url": "/",      
+        "icon":"faHouse"
+      },
+      {
+        "label": "Staff",
+        "url": "/",
+        "icon":"faHouse"
+      },
+      {
+        "label": "Record Book",
+        "url": "/",
+        "icon":"faHouse"
+      }
+    ]
+
+  }

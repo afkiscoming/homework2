@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+nav {
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    margin: 0 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-container img {
+    width: auto;
+    min-width: 100px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.left-container .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    ;
+}
+
+.left-container .user-info p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: gray;
+}
+
+.right-container {
+    display: flex;
+    align-items: center;
+    gap: 15px
+}
+
+.right-container svg {
+    width: 25px !important;
+    height: 25px !important;
+    cursor: pointer;
+}
+
+.right-container img {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: cover;
+    border-radius: 10px !important;
+    cursor: pointer;
+}
+
+.menus {
+    display: flex;
+    padding: 0 1.5rem;
+    flex-wrap: nowrap;
+
+}
+
+.menu-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items a {
+    color: gray;
+    text-decoration: none;
+}
+
+.menu-items button {
+    color: gray;
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu-items svg {
+    padding-left: 16px;
+    color: gray;
+}
+
+.menu-items a svg{
+    padding-right: 5px;
+    padding-left: 12px;
+}
+
+.menu-items a,
+.menu-items button {
+    text-align: left;
+    padding: 10px 12px 10px 5px;
+    white-space: nowrap;
+}
+
+.menu-items:hover,
+.menu-items a:hover,
+.menu-items button:hover {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.arrow::after {
+    content: "";
+    display: inline-block;
+    margin-left: 0.28em;
+    vertical-align: 0.09em;
+    border-top: 0.42em solid;
+    border-right: 0.32em solid transparent;
+    border-left: 0.32em solid transparent;
+}
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+        0 4px 6px -2px rgba(71, 63, 79, 0.16);
+    z-index: 9999;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    list-style: none;
+    background-color: #fff;
+    display: none;
+    border-radius: 10px;
+}
+
+.dropdown li {
+    padding-left: 1rem;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+.dropdown.dropdown-submenu {
+    position: absolute;
+    left: 100%;
+    top: -8px;
+}
