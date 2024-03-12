@@ -1,40 +1,52 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
-const useFetch = (url) => {
-    const [data, setData] = useState(null)
-    const [isPending, setIsPending] = useState(true)
-    const [error, setError] = useState(null)
+const useFetch = (url, formData = null) => {
+    const [data, setData] = useState(null);
+    const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
+
         const abortCont = new AbortController();
 
-        fetch(url, { signal: abortCont.signal })
-            .then(res => {
-                if (!res.ok) {
-                    throw Error('could not fetch the data for that resource!')
+        const fetchData = async () => {
+            try {
+                const fetchOptions = {
+                    method: 'GET',
+                    signal: abortCont.signal,
+                };
+
+                if (formData) {
+                    fetchOptions.method = 'POST';
+                    fetchOptions.body = formData;
                 }
-                return res.json()
-            })
-            .then(data => {
-                setData(data);
+
+                const response = await fetch(url, fetchOptions);
+
+                if (!response.ok) {
+                    throw Error('Could not fetch the data for that resource!');
+                }
+
+                const responseData = await response.json();
+                setData(responseData);
                 setIsPending(false);
                 setError(null);
-            })
-            .catch(err => {
+            } catch (err) {
                 if (err.name === 'AbortError') {
-                    console.log('fetch aborted')
-                    console.log(err)
-                }
-                else {
+                    console.log('Fetch aborted');
+                } else {
                     setIsPending(false);
                     setError(err.message);
                 }
-            })
+            }
+        };
+
+        fetchData();
 
         return () => abortCont.abort();
-    }, [url])
+    }, [url, formData]);
 
-    return { data, isPending, error }
-}
+    return { data, isPending, error };
+};
 
-export default useFetch
+export default useFetch;

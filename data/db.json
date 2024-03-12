@@ -6,7 +6,8 @@
         "school": "ISB",
         "position": "Principal",
         "profilePic": "https://images.pexels.com/photos/20222375/pexels-photo-20222375/free-photo-of-scruffy-dog-in-meadow.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "id": 1
+        "id": 1,
+        "calendarId": 8443
       },
       {
         "name": "Tolga",
@@ -14,7 +15,16 @@
         "school": "ICHB",
         "position": "Secretary",
         "profilePic": "https://images.pexels.com/photos/12672768/pexels-photo-12672768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "id": 2
+        "id": 2,
+        "calendarId": 8442
+      }
+    ],
+
+    "apiData": [
+      {
+        "schoolGroup": "educare",
+        "db": "educare_2023_2024",
+        "id": 1
       }
     ],
 
@@ -22,6 +32,11 @@
       {
         "label": "Home",
         "url": "/",
+        "icon":"faHouse"
+      },
+      {
+        "label": "Calendar",
+        "url": "/calendar",
         "icon":"faHouse"
       },
       {
