@@ -1,9 +1,7 @@
 import useFetch from './useFetch'
 import MenuItems from "./MenuItems"
 
-const NavBottom = () => {
-
-  const { data: menus, error, isPending } = useFetch('http://localhost:8000/menus')
+const NavBottom = ({menus, error, isPending}) => {
 
   return (
     <div className="nav-bottom">

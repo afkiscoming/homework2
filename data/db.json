@@ -45,25 +45,16 @@
         "submenu": [
           {
             "label": "About",
-            "url": "/",
             "submenu": [
               {
                 "label": "About us",
                 "url": "/about"
-              },
-              {
-                "label": "History",
-                "url": "/"
-              },    
-              {
-                "label": "Future",
-                "url": "/"
               }
             ]
           },
           {
             "label": "Mission",
-            "url": "/"
+            "url": "/mission"
           }
         ]
       },
@@ -74,18 +65,33 @@
       },
       {
         "label": "Student",
-        "url": "/",      
+        "url": "/student",      
         "icon":"faHouse"
       },
       {
         "label": "Staff",
-        "url": "/",
+        "url": "/staff",
         "icon":"faHouse"
       },
       {
         "label": "Record Book",
-        "url": "/",
+        "url": "/record-book",
         "icon":"faHouse"
+      }
+    ],
+
+    "profile-menu": [
+      {
+        "label": "Admission",
+        "url": "/admission"
+      },
+      {
+        "label": "Calendar",
+        "url": "/calendar"
+      },
+      {
+        "label": "Student",
+        "url": "/student"
       }
     ]
 
